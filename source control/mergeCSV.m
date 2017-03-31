@@ -7,15 +7,15 @@ function [ time, roi_data ] = mergeCSV( strFilePrefix )
 %   order. 
 %
 %   Output from Cellvizio software is split by frame number. The first recording 
-%   will be titled: ìprefix_from1to7259.csv,î the second file will be 
-%   ìprefix_from7260to14518.csv,î and the third will be ìprefix_from14519to21777.csv.î 
+%   will be titled: ‚Äúprefix_from1to7259.csv,‚Äù the second file will be 
+%   ‚Äúprefix_from7260to14518.csv,‚Äù and the third will be ‚Äúprefix_from14519to21777.csv.‚Äù 
 %   However, Matlab will mess up the order of these files and will put the 
 %   third file as coming before the second file because the seven in 7260 is a 
 %   greater number than the one in 14,519. To fix this, you need to pad the 
 %   file name with zeros such that the total digits is the same as the total 
 %   digits of the largest frame number. To fix these files, I would rename 
-%   file 1 to ìprefix_from00001to7259.csv,î and file 2 to 
-%   ìprefix_from07260to14518.csv.î This way, Matlab reads in the files in the 
+%   file 1 to ‚Äúprefix_from00001to7259.csv,‚Äù and file 2 to 
+%   ‚Äúprefix_from07260to14518.csv.‚Äù This way, Matlab reads in the files in the 
 %   correct order.
 % 
 % 
